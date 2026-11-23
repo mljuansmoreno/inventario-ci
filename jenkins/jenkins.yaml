@@ -14,3 +14,18 @@ jenkins:
             name: estudiante
             permissions:
               - Overall/Administer
+jobs:
+  - script: |
+      pipelineJob('inventario') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote { url('https://github.com/mljuansmoreno/inventario-ci.git') }
+                branch('*/main')
+              }
+            }
+            scriptPath('app/Jenkinsfile')
+          }
+        }
+      }
