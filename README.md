@@ -48,3 +48,4 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 | Disparo | Manual con **Construir ahora** | Push a `main` o ejecución manual |
 | Reportes | **Test Result** del build interpreta JUnit | Artefacto **reporte-pruebas** con `junit.xml` |
 | Construcción | Etapa **Construir imagen** después de pytest | Paso homónimo del job `imagen`, que depende de `pruebas` |
+| Humo | Etapa **Prueba de humo** | Último paso del job `imagen` |
