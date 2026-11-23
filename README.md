@@ -45,7 +45,7 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 | Archivo | `app/Jenkinsfile` | `.github/workflows/ci.yml` |
 | Operación | El estudiante administra el controlador y Docker | GitHub administra el servicio y el runner hospedado |
 | Pruebas | Contenedor efímero `python:3.12-slim` en Docker local | La misma imagen en el runner Ubuntu del job `pruebas` |
-| Disparo | Manual con **Construir ahora** | Push a `main` o ejecución manual |
+| Disparo | **Construir ahora** o sondeo de Git cada dos minutos | Push a `main` o ejecución manual |
 | Reportes | **Test Result** del build interpreta JUnit | Artefacto **reporte-pruebas** con `junit.xml` |
 | Construcción | Etapa **Construir imagen** después de pytest | Paso homónimo del job `imagen`, que depende de `pruebas` |
 | Humo | Etapa **Prueba de humo** | Último paso del job `imagen` |
