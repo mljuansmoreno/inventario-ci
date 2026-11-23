@@ -4,3 +4,6 @@ jenkins:
   securityRealm:
     local:
       allowsSignup: false
+      users:
+        - id: estudiante
+          password: '${JENKINS_CLAVE}'
