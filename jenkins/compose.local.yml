@@ -3,10 +3,8 @@ services:
     environment:
       JAVA_OPTS: -Djenkins.install.runSetupWizard=false -Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true
       INVENTARIO_REPO: file:///repo-local
-      GIT_CONFIG_COUNT: '2'
+      GIT_CONFIG_COUNT: '1'
       GIT_CONFIG_KEY_0: safe.directory
       GIT_CONFIG_VALUE_0: /repo-local
-      GIT_CONFIG_KEY_1: safe.directory
-      GIT_CONFIG_VALUE_1: /repo-local/.git
     volumes:
-      - ../:/repo-local:ro
+      - ../.git:/repo-local:ro
