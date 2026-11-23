@@ -37,3 +37,8 @@ En `app/src/inventario/core.py`, cambiar la resta de `retirar` por una suma deja
 Restaurar `-=` recupera el descuento. Confirma la corrección, publica en `main` y vuelve a construir el job para ver los dos resultados en el historial.
 
 Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de los cambios (*change failure rate*). La métrica cuenta despliegues que requieren intervención en producción. Un build rojo del laboratorio no mide por sí solo esa tasa.
+
+## Comparación de los motores
+
+| Concepto | Jenkins | GitHub Actions |
+|---|---|---|
