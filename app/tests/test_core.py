@@ -30,3 +30,8 @@ def test_retirar_sin_saldo(inventario):
     with pytest.raises(ValueError, match="insuficientes"):
         inventario.retirar("té", 3)
     assert inventario.consultar("té") == 2
+
+
+def test_retirar_desconocido(inventario):
+    with pytest.raises(KeyError):
+        inventario.retirar("sal", 1)
