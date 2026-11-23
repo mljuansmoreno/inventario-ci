@@ -4,3 +4,4 @@ git
 junit
 pipeline-stage-view
 job-dsl
+matrix-auth
