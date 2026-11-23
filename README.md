@@ -33,3 +33,5 @@ El script de pruebas crea un contenedor Python 3.12, copia la aplicación, insta
 El humo arranca la imagen y consulta `GET /salud` por HTTP dentro del contenedor. Comprueba el estado y la versión y escribe `{"estado": "ok", "version": "1.0.0"}` en la consola.
 
 En `app/src/inventario/core.py`, cambiar la resta de `retirar` por una suma deja 11 unidades al retirar 3 de 8. La prueba `test_retirar_descuenta` espera 5. La construcción de la imagen y el humo quedan omitidos.
+
+Restaurar `-=` recupera el descuento. Confirma la corrección, publica en `main` y vuelve a construir el job para ver los dos resultados en el historial.
