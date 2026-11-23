@@ -29,4 +29,4 @@ class Inventario:
         self._validar_cantidad(cantidad)
         if self.consultar(nombre) < cantidad:
             raise ValueError("Existencias insuficientes")
-        self._productos[nombre]["cantidad"] -= cantidad
+        self._productos[nombre]["cantidad"] += cantidad
