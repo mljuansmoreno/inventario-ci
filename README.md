@@ -61,3 +61,7 @@ Si el puerto está ocupado, cambia `JENKINS_PUERTO` en `.env`, vuelve a ejecutar
 ## Al finalizar
 
 Desde `jenkins/`, usa `docker compose down` para detener el servidor. El volumen conserva el historial para la siguiente clase.
+
+## Evidencias
+
+[Primera ejecución verde](https://github.com/mljuansmoreno/inventario-ci/actions/runs/45115847459). Los jobs de pruebas e imagen terminaron correctamente.
