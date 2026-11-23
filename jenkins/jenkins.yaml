@@ -1,2 +1,3 @@
 jenkins:
   systemMessage: 'Integración Continua · Unidad 2 · Escenario 4'
+  numExecutors: 1
