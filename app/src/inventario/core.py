@@ -23,3 +23,10 @@ class Inventario:
 
     def consultar(self, nombre):
         return self._productos[self._nombre(nombre)]["cantidad"]
+
+    def retirar(self, nombre, cantidad):
+        nombre = self._nombre(nombre)
+        self._validar_cantidad(cantidad)
+        if self.consultar(nombre) < cantidad:
+            raise ValueError("Existencias insuficientes")
+        self._productos[nombre]["cantidad"] -= cantidad
