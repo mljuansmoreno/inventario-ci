@@ -3,3 +3,4 @@ workflow-aggregator
 git
 junit
 pipeline-stage-view
+job-dsl
