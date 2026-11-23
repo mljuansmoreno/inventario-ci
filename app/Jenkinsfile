@@ -4,3 +4,6 @@ pipeline {
         timeout(time: 20, unit: 'MINUTES')
         disableConcurrentBuilds()
     }
+    environment {
+        IMAGEN = "inventario:${BUILD_NUMBER}"
+    }
