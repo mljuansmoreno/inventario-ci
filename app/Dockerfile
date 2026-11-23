@@ -3,3 +3,4 @@ WORKDIR /app
 COPY src/ .
 USER 65534:65534
 EXPOSE 8000
+CMD ["python", "-m", "inventario"]
