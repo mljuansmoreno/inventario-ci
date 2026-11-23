@@ -14,3 +14,9 @@ class Inventario:
     def _validar_cantidad(cantidad):
         if type(cantidad) is not int or cantidad <= 0:
             raise ValueError("La cantidad debe ser un entero positivo")
+
+    def agregar(self, nombre, cantidad):
+        nombre = self._nombre(nombre)
+        self._validar_cantidad(cantidad)
+        producto = self._productos.setdefault(nombre, {"cantidad": 0})
+        producto["cantidad"] += cantidad
