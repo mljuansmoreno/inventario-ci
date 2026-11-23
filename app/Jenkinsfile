@@ -18,3 +18,8 @@ pipeline {
                 }
             }
         }
+        stage('Construir imagen') {
+            steps {
+                sh 'docker build -t "$IMAGEN" app'
+            }
+        }
