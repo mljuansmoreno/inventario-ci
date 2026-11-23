@@ -21,3 +21,5 @@ Arranca el controlador con `docker compose up -d --build`. Sigue el inicio con `
 Abre [Jenkins local](http://localhost:8080) e ingresa como `estudiante` con la clave del entorno. El valor de clase por defecto es `cambiar-esta-clave`.
 
 JCasC establece el mensaje del curso y Job DSL crea **inventario**. El job lee `app/Jenkinsfile` desde Git en la rama `main`.
+
+Abre **inventario → Construir ahora**. La vista de etapas muestra **Pruebas unitarias**, **Construir imagen** y **Prueba de humo**.
