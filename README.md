@@ -73,3 +73,7 @@ Desde `jenkins/`, usa `docker compose down` para detener el servidor. El volumen
 En Jenkins, el build **#2** completó las tres etapas. En **#3** falló la resta y quedaron omitidas las dos etapas siguientes. **#5** construyó la corrección y respondió `{"estado": "ok", "version": "1.0.0"}`.
 
 Para revisar una ejecución, abre su sección **Artifacts**, descarga **reporte-pruebas** y abre `junit.xml`. El atributo `failures` indica cuántos casos fallaron y cada elemento `testcase` identifica la prueba.
+
+![Historial de Jenkins con el fallo en el build 3 y su recuperación](evidencias/jenkins-etapas.png)
+
+El build **#1** se detuvo durante el checkout local por la propiedad de la carpeta Git. La excepción de confianza para `/repo-local` permitió ejecutar el pipeline desde **#2**.
