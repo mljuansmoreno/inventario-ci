@@ -10,3 +10,5 @@ services:
       JENKINS_CLAVE: ${JENKINS_CLAVE:-cambiar-esta-clave}
     group_add:
       - '${DOCKER_GID:-0}'
+    volumes:
+      - jenkins_home:/var/jenkins_home
