@@ -13,3 +13,9 @@ class Handler(BaseHTTPRequestHandler):
         if self.path != "/salud":
             self.send_error(404)
             return
+        cuerpo = json.dumps(salud()).encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Content-Length", str(len(cuerpo)))
+        self.end_headers()
+        self.wfile.write(cuerpo)
