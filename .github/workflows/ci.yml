@@ -20,3 +20,7 @@ jobs:
           name: reporte-pruebas
           path: app/reportes/junit.xml
           if-no-files-found: error
+  imagen:
+    needs: pruebas
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
