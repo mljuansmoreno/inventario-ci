@@ -13,3 +13,7 @@ for intento in range(30):
         if intento == 29:
             raise
         time.sleep(1)
+
+if documento != {"estado": "ok", "version": "1.0.0"}:
+    raise SystemExit(f"Respuesta inesperada: {documento!r}")
+print(json.dumps(documento))
