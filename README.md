@@ -29,3 +29,5 @@ Para usar tu copia de Git, ejecuta desde `jenkins/` el comando `docker compose -
 ## Qué valida el pipeline
 
 El script de pruebas crea un contenedor Python 3.12, copia la aplicación, instala pytest y arranca el proceso. Recupera el XML de JUnit antes de eliminar el contenedor.
+
+El humo arranca la imagen y consulta `GET /salud` por HTTP dentro del contenedor. Comprueba el estado y la versión y escribe `{"estado": "ok", "version": "1.0.0"}` en la consola.
