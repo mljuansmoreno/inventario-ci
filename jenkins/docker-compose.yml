@@ -2,3 +2,5 @@ services:
   jenkins:
     build: .
     container_name: jenkins-clase
+    ports:
+      - '127.0.0.1:${JENKINS_PUERTO:-8080}:8080'
