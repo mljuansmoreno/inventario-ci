@@ -1,0 +1,4 @@
+services:
+  jenkins:
+    build: .
+    container_name: jenkins-clase
