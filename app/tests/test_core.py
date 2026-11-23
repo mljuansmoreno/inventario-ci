@@ -17,3 +17,9 @@ def test_agregar_acumula(inventario):
     inventario.agregar("pan", 2)
     inventario.agregar("pan", 3)
     assert inventario.consultar("pan") == 5
+
+
+def test_retirar_descuenta(inventario):
+    inventario.agregar("arroz", 8)
+    inventario.retirar("arroz", 3)
+    assert inventario.consultar("arroz") == 5
