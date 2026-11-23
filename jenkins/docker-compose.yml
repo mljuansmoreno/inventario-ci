@@ -6,3 +6,4 @@ services:
       - '127.0.0.1:${JENKINS_PUERTO:-8080}:8080'
     environment:
       CASC_JENKINS_CONFIG: /opt/curso/jenkins.yaml
+      JAVA_OPTS: -Djenkins.install.runSetupWizard=false
