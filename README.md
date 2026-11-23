@@ -15,3 +15,5 @@ Usa Git y Docker con contenedores Linux. Reserva unos 4 GB de memoria y al menos
 Puedes adelantar la descarga de la imagen común con `docker pull python:3.12-slim`.
 
 Desde `jenkins/`, copia `.env.example` a `.env` y define una clave para `estudiante`. Git ignora ese archivo.
+
+Arranca el controlador con `docker compose up -d --build`. Sigue el inicio con `docker compose logs -f jenkins` hasta leer `Jenkins is fully up and running`.
