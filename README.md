@@ -42,3 +42,4 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 
 | Concepto | Jenkins | GitHub Actions |
 |---|---|---|
+| Archivo | `app/Jenkinsfile` | `.github/workflows/ci.yml` |
