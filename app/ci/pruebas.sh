@@ -7,3 +7,4 @@ contenedor=$(docker create -w /curso python:3.12-slim sh -ec '
     pip install --disable-pip-version-check -r requirements-test.txt
     python -m pytest -q --junitxml=/curso/reportes/junit.xml
 ')
+trap 'docker rm -f "$contenedor" >/dev/null' EXIT
