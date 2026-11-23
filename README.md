@@ -77,3 +77,5 @@ Para revisar una ejecución, abre su sección **Artifacts**, descarga **reporte-
 ![Historial de Jenkins con el fallo en el build 3 y su recuperación](evidencias/jenkins-etapas.png)
 
 El build **#1** se detuvo durante el checkout local por la propiedad de la carpeta Git. La excepción de confianza para `/repo-local` permitió ejecutar el pipeline desde **#2**.
+
+La vista gráfica colorea las etapas posteriores al fallo. El [extracto de consola del build 3](evidencias/jenkins-build-3.txt) confirma que Jenkins omitió la construcción y el humo después de que pytest detectara la regresión.
