@@ -19,3 +19,8 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(cuerpo)))
         self.end_headers()
         self.wfile.write(cuerpo)
+
+
+if __name__ == "__main__":
+    with ThreadingHTTPServer(("0.0.0.0", 8000), Handler) as servidor:
+        servidor.serve_forever()
