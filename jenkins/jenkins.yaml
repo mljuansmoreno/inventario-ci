@@ -21,7 +21,7 @@ jobs:
           cpsScm {
             scm {
               git {
-                remote { url('https://github.com/mljuansmoreno/inventario-ci.git') }
+                remote { url('${INVENTARIO_REPO:-https://github.com/mljuansmoreno/inventario-ci.git}') }
                 branch('*/main')
               }
             }
