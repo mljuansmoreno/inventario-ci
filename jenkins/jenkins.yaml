@@ -7,3 +7,10 @@ jenkins:
       users:
         - id: estudiante
           password: '${JENKINS_CLAVE}'
+  authorizationStrategy:
+    globalMatrix:
+      entries:
+        - user:
+            name: estudiante
+            permissions:
+              - Overall/Administer
