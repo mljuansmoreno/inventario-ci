@@ -49,3 +49,7 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 | Reportes | **Test Result** del build interpreta JUnit | Artefacto **reporte-pruebas** con `junit.xml` |
 | Construcción | Etapa **Construir imagen** después de pytest | Paso homónimo del job `imagen`, que depende de `pruebas` |
 | Humo | Etapa **Prueba de humo** | Último paso del job `imagen` |
+
+## Acceso al motor Docker
+
+El socket permite que la CLI dentro del controlador cree contenedores hermanos en el motor del host. Quien puede usarlo tiene privilegios amplios sobre el host. Usa este montaje en un laboratorio local con código de confianza.
