@@ -7,3 +7,8 @@ pipeline {
     environment {
         IMAGEN = "inventario:${BUILD_NUMBER}"
     }
+    stages {
+        stage('Pruebas unitarias') {
+            steps {
+                sh 'sh app/ci/pruebas.sh'
+            }
