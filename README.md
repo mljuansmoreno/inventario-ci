@@ -47,3 +47,4 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 | Pruebas | Contenedor efímero `python:3.12-slim` en Docker local | La misma imagen en el runner Ubuntu del job `pruebas` |
 | Disparo | Manual con **Construir ahora** | Push a `main` o ejecución manual |
 | Reportes | **Test Result** del build interpreta JUnit | Artefacto **reporte-pruebas** con `junit.xml` |
+| Construcción | Etapa **Construir imagen** después de pytest | Paso homónimo del job `imagen`, que depende de `pruebas` |
