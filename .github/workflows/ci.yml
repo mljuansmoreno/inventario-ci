@@ -2,3 +2,4 @@ name: Inventario CI
 on:
   push:
     branches: [main]
+  workflow_dispatch:
