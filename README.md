@@ -67,3 +67,5 @@ Desde `jenkins/`, usa `docker compose down` para detener el servidor. El volumen
 [Primera ejecución verde](https://github.com/mljuansmoreno/inventario-ci/actions/runs/45115847459). Los jobs de pruebas e imagen terminaron correctamente.
 
 [Fallo controlado en Actions](https://github.com/mljuansmoreno/inventario-ci/actions/runs/45116185823), commit `77c21cb`. El JUnit registra seis aprobadas y un fallo en `test_retirar_descuenta`. Actions omitió el job `imagen`.
+
+[Corrección en Actions](https://github.com/mljuansmoreno/inventario-ci/actions/runs/45116361574), commit `b3fee1d`. El reporte registra siete aprobadas. La imagen se construyó y superó la prueba de humo.
