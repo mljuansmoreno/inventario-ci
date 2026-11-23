@@ -1,0 +1,5 @@
+FAILED tests/test_core.py::test_retirar_descuenta - AssertionError: assert 11...
+1 failed, 6 passed in 0.34s
+Stage "Construir imagen" skipped due to earlier failure(s)
+Stage "Prueba de humo" skipped due to earlier failure(s)
+Finished: FAILURE
