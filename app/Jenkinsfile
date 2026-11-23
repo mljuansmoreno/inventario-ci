@@ -12,3 +12,9 @@ pipeline {
             steps {
                 sh 'sh app/ci/pruebas.sh'
             }
+            post {
+                always {
+                    junit 'app/reportes/junit.xml'
+                }
+            }
+        }
