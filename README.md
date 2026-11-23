@@ -17,3 +17,5 @@ Puedes adelantar la descarga de la imagen común con `docker pull python:3.12-sl
 Desde `jenkins/`, copia `.env.example` a `.env` y define una clave para `estudiante`. Git ignora ese archivo.
 
 Arranca el controlador con `docker compose up -d --build`. Sigue el inicio con `docker compose logs -f jenkins` hasta leer `Jenkins is fully up and running`.
+
+Abre [Jenkins local](http://localhost:8080) e ingresa como `estudiante` con la clave del entorno. El valor de clase por defecto es `cambiar-esta-clave`.
