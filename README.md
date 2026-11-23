@@ -25,3 +25,7 @@ JCasC establece el mensaje del curso y Job DSL crea **inventario**. El job lee `
 Abre **inventario → Construir ahora**. La vista de etapas muestra **Pruebas unitarias**, **Construir imagen** y **Prueba de humo**.
 
 Para usar tu copia de Git, ejecuta desde `jenkins/` el comando `docker compose -f docker-compose.yml -f compose.local.yml up -d --build`. El job construye la última revisión confirmada de `main`.
+
+## Qué valida el pipeline
+
+El script de pruebas crea un contenedor Python 3.12, copia la aplicación, instala pytest y arranca el proceso. Recupera el XML de JUnit antes de eliminar el contenedor.
