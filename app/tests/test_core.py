@@ -23,3 +23,10 @@ def test_retirar_descuenta(inventario):
     inventario.agregar("arroz", 8)
     inventario.retirar("arroz", 3)
     assert inventario.consultar("arroz") == 5
+
+
+def test_retirar_sin_saldo(inventario):
+    inventario.agregar("té", 2)
+    with pytest.raises(ValueError, match="insuficientes"):
+        inventario.retirar("té", 3)
+    assert inventario.consultar("té") == 2
