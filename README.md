@@ -57,3 +57,7 @@ El socket permite que la CLI dentro del controlador cree contenedores hermanos e
 Si Linux rechaza el acceso al socket, configura `DOCKER_GID` en `.env` con el resultado de `stat -c %g /var/run/docker.sock` y recrea el controlador con Docker Compose.
 
 Si el puerto está ocupado, cambia `JENKINS_PUERTO` en `.env`, vuelve a ejecutar Compose y abre el nuevo puerto en localhost.
+
+## Al finalizar
+
+Desde `jenkins/`, usa `docker compose down` para detener el servidor. El volumen conserva el historial para la siguiente clase.
