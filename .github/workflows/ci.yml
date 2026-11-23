@@ -11,3 +11,5 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - name: Pruebas unitarias
+        run: sh app/ci/pruebas.sh
