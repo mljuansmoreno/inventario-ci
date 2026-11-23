@@ -35,3 +35,8 @@ def test_retirar_sin_saldo(inventario):
 def test_retirar_desconocido(inventario):
     with pytest.raises(KeyError):
         inventario.retirar("sal", 1)
+
+
+def test_nombre_vacio(inventario):
+    with pytest.raises(ValueError, match="nombre"):
+        inventario.agregar("   ", 1)
