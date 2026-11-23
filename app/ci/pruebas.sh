@@ -9,3 +9,5 @@ contenedor=$(docker create -w /curso python:3.12-slim sh -ec '
 ')
 trap 'docker rm -f "$contenedor" >/dev/null' EXIT
 docker cp ./. "$contenedor:/curso"
+docker start -a "$contenedor" || true
+resultado=$(docker inspect -f '{{.State.ExitCode}}' "$contenedor")
