@@ -55,3 +55,5 @@ Detectar la regresión antes del despliegue ayuda a reducir la tasa de fallos de
 El socket permite que la CLI dentro del controlador cree contenedores hermanos en el motor del host. Quien puede usarlo tiene privilegios amplios sobre el host. Usa este montaje en un laboratorio local con código de confianza.
 
 Si Linux rechaza el acceso al socket, configura `DOCKER_GID` en `.env` con el resultado de `stat -c %g /var/run/docker.sock` y recrea el controlador con Docker Compose.
+
+Si el puerto está ocupado, cambia `JENKINS_PUERTO` en `.env`, vuelve a ejecutar Compose y abre el nuevo puerto en localhost.
