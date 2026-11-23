@@ -20,3 +20,6 @@ class Inventario:
         self._validar_cantidad(cantidad)
         producto = self._productos.setdefault(nombre, {"cantidad": 0})
         producto["cantidad"] += cantidad
+
+    def consultar(self, nombre):
+        return self._productos[self._nombre(nombre)]["cantidad"]
