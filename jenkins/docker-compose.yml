@@ -7,7 +7,7 @@ services:
     environment:
       CASC_JENKINS_CONFIG: /opt/curso/jenkins.yaml
       JAVA_OPTS: -Djenkins.install.runSetupWizard=false
-      JENKINS_CLAVE: ${JENKINS_CLAVE:-cambiar-esta-clave}
+      JENKINS_CLAVE: ${JENKINS_CLAVE:?Define la clave en jenkins/.env}
     group_add:
       - '${DOCKER_GID:-0}'
     volumes:

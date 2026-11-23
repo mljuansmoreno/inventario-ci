@@ -18,7 +18,7 @@ Desde `jenkins/`, copia `.env.example` a `.env` y define una clave para `estudia
 
 Arranca el controlador con `docker compose up -d --build`. Sigue el inicio con `docker compose logs -f jenkins` hasta leer `Jenkins is fully up and running`.
 
-Abre [Jenkins local](http://localhost:8080) e ingresa como `estudiante` con la clave del entorno. El valor de clase por defecto es `cambiar-esta-clave`.
+Abre [Jenkins local](http://localhost:8080) e ingresa como `estudiante` con la clave que guardaste en `jenkins/.env`. Compose exige una clave antes de iniciar.
 
 JCasC establece el mensaje del curso y Job DSL crea **inventario**. El job lee `app/Jenkinsfile` desde Git en la rama `main`.
 
