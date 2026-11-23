@@ -28,3 +28,5 @@ jobs:
       IMAGEN: inventario:${{ github.sha }}
     steps:
       - uses: actions/checkout@v4
+      - name: Construir imagen
+        run: docker build -t "$IMAGEN" app
