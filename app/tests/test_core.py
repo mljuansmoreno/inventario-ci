@@ -40,3 +40,12 @@ def test_retirar_desconocido(inventario):
 def test_nombre_vacio(inventario):
     with pytest.raises(ValueError, match="nombre"):
         inventario.agregar("   ", 1)
+
+
+def test_cantidad_invalida(inventario):
+    inventario.agregar("sal", 4)
+    for cantidad in (0, -1, 1.5, True):
+        for operacion in (inventario.agregar, inventario.retirar):
+            with pytest.raises(ValueError, match="entero positivo"):
+                operacion("sal", cantidad)
+    assert inventario.consultar("sal") == 4
