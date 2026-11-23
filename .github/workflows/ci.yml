@@ -1,1 +1,4 @@
 name: Inventario CI
+on:
+  push:
+    branches: [main]
