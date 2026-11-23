@@ -11,3 +11,5 @@ Jenkins carga [app/Jenkinsfile](app/Jenkinsfile). GitHub descubre el flujo en [.
 ## Preparar el laboratorio
 
 Usa Git y Docker con contenedores Linux. Reserva unos 4 GB de memoria y al menos 2 GB de disco. El primer build descarga imágenes y plugins.
+
+Puedes adelantar la descarga de la imagen común con `docker pull python:3.12-slim`.
