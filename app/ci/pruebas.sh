@@ -11,3 +11,5 @@ trap 'docker rm -f "$contenedor" >/dev/null' EXIT
 docker cp ./. "$contenedor:/curso"
 docker start -a "$contenedor" || true
 resultado=$(docker inspect -f '{{.State.ExitCode}}' "$contenedor")
+docker cp "$contenedor:/curso/reportes/junit.xml" reportes/junit.xml
+exit "$resultado"
